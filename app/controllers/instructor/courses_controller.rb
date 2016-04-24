@@ -10,7 +10,7 @@ class Instructor::CoursesController < ApplicationController
        redirect_to instructor_course_path(@course)
      else
       render :new, status: :unprocessable_entity
-    end 
+     end
   end
 
   def show
@@ -22,5 +22,4 @@ class Instructor::CoursesController < ApplicationController
   def course_params
     params.require(:course).permit(:title, :description, :cost)
   end
-
 end
