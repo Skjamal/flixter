@@ -1,7 +1,7 @@
 class Instructor::SectionsController < ApplicationController
   def new
     @course = Course.find(params[:course_id])
-      @section = Section.new  
+    @section = Section.new  
   end
 
   def create
