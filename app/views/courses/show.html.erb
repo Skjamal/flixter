@@ -2,14 +2,15 @@
 <div class="booyah-box col-xs-10 col-xs-offset-1"%>
   <h1><%= @course.title %></h1>
   <%= image_tag @course.image, class:'img-responsive' %>
+  <br/ ><br />
 
 <div class="col-sm-4 col-xs-12 text-center">
   <span class="label label-default">
     <%= number_to_currency @course.cost %>
   </span>
-
+  <br />
   <% if current_user && current_user == @course.user %>
-
+  <br />
     <%= link_to 'Administer', instructor_course_path(@course), class: 'btn btn-danger btn-large' %>
   <% end %>
 </div>
@@ -20,17 +21,26 @@
 
 <div class="col-xs-12">
   <% @course.sections.each do |section| %>
+    <br /><br />
     <div class="section">
+      <h3>
       <%= section.title %>
+      </h3>
+  <br />
+  <br />
       <% section.lessons.each do |lesson| %>
-    <div class="lesson">
+        <div class="col-xs-12 col-sm-6">
+          <div class="lesson text-center">
+            <br />
       <%= link_to lesson_path(lesson) do %>
         <b><%= lesson.title %></b>
-            -
-           <%= lesson.subtitle %>
-        <% end %>
-</div>
-        <% end %>
+        <br />
+        <%= lesson.subtitle %>
+      <% end %>
+    </div>
+    </div>
+    <% end %>
+    <br class="clr" />
     </div>
     <% end %>
    </div>
