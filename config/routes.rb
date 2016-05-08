@@ -10,7 +10,7 @@ Flixter::Application.routes.draw do
     namespace :instructor do
       resources :lessons, only: [:update]
       resources :sections, only: [:update] do
-        resources :lessons, only: [:create, :new]
+        resources :lessons, only: [:create]
         end
     namespace :instructor do
       resources :sections, only: [:update]
