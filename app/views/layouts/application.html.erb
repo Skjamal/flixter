@@ -21,7 +21,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">Flixter</a>
+      <a class="navbar-brand' href='#'>Flixter</a>    
     </div>
     
 
@@ -63,11 +63,44 @@
 
 <div id="footer">
   <div class="container">
+    <div class="col-xs-12 col-sm-3">
     <b>Teachers</b>
     <br />
     <%= link_to 'Teach a Course', new_instructor_course_path %>
+    <br />
+    <%= link_to 'My Dashboard', dashboard_path %>
+  </div>
+  <div class="col-xs-12 col-sm-3">
+    <b>About</b>
+    <br />
+    <%= link_to 'Team', '#' %>
+  <br />
+  <%= link_to 'Careers', '#' %>
+  <br />
+  <%= link_to 'Privacy Policy', '#' %>
+  </div>
+    <div class="col-xs-12 col-sm-3">
+      <b>Contact</b>
+      <br />
+      satinder@yourpeculiarcareer.com
+      <br />
+      222 S. Lake Dr.
+      <br />
+      Chicago Illinois, 53432
+    </div>
+  <div class="col-xs-12 col-sm-3">
+    <b>Social</b>
+    <br />
+    <br />
+    <%= link_to 'https://github.com/Skjamal' do %>
+    <%= image_tag 'github.png', class: 'social-button' %>
+  <% end %>
+    <%= link_to 'https://www.facebook.com' do %>
+    <%= image_tag 'facebook.png', class: 'social-button' %>
+  <% end %>
+    <%= link_to 'https://twitter.com/?lang=en' do %>
+    <%= image_tag 'twitter.png', class: 'social-button' %>
+  <% end %>
+  </div>
   </div>
 </div>
-
-</body>
-</html>
