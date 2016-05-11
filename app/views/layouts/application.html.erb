@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Flixter</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href="http://vjs.zencdn.net/5.0.2/video-js.css" rel="stylesheet">
   <script src="http://vjs.zencdn.net/5.0.2/video.js"></script>
@@ -11,21 +11,21 @@
 <body>
 
 <div id="wrap">
-  <nav class="navbar navbar-inverse">
-  <div class="container-fluid">
+  <nav class="navbar navbar-inverse" role="navigation">
+    <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
         <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand' href='#'>Flixter</a>    
-    </div>
-    
+      <%= link_to 'Flixter', root_path, :class => 'navbar-brand' %>
+    </div>    
 
     <!-- Collect the nav links, forms, and other content for toggling -->
+
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li>
@@ -34,13 +34,12 @@
       </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
        <% if user_signed_in? %>
         <li><%= link_to 'My Dashboard', dashboard_path %></li>
         <li><%= link_to 'Sign Out', destroy_user_session_path, method: :delete %></li>
       <% else %>
         <li><%= link_to 'Sign In', new_user_session_path %></li>
-        <li><%= link_to 'Sign up', new_user_registration_path %>/li>
+        <li><%= link_to 'Sign up', new_user_registration_path %></li>
       <% end %>
     </ul>
   </div><!-- /.navbar-collapse -->
@@ -64,12 +63,13 @@
 <div id="footer">
   <div class="container">
     <div class="col-xs-12 col-sm-3">
-    <b>Teachers</b>
-    <br />
-    <%= link_to 'Teach a Course', new_instructor_course_path %>
-    <br />
-    <%= link_to 'My Dashboard', dashboard_path %>
+      <b>Teachers</b>
+      <br />
+      <%= link_to 'Teach a Course', new_instructor_course_path %>
+      <br />
+      <%= link_to 'My Dashboard', dashboard_path %>
   </div>
+
   <div class="col-xs-12 col-sm-3">
     <b>About</b>
     <br />
@@ -77,17 +77,18 @@
   <br />
   <%= link_to 'Careers', '#' %>
   <br />
-  <%= link_to 'Privacy Policy', '#' %>
+  <%= link_to 'Privacy Policy', privacy_path %>
   </div>
     <div class="col-xs-12 col-sm-3">
       <b>Contact</b>
       <br />
-      satinder@yourpeculiarcareer.com
+      satinder@yourunusualcareer.com
       <br />
       222 S. Lake Dr.
       <br />
       Chicago Illinois, 53432
     </div>
+
   <div class="col-xs-12 col-sm-3">
     <b>Social</b>
     <br />
