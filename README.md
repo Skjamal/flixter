@@ -5,7 +5,7 @@
 ### You can view Flixter [here](https://flixter-satinder-jamal.herokuapp.com/). Sign up, enroll into a course, make your own course and have fun learning!
 
 ## Features
-* Easy to use platform for instructors to create courseas and make money.
+* Easy to use platform for instructors to create courses and make money.
 * Stripe is used to process payments by students purchasing courses made by teachers.
 * Teachers can customize course lessons and sections.
 * jQuery is used for drag and drop for instructors to easily organize lessons and courses.
