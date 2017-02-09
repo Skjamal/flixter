@@ -11,7 +11,7 @@
 * jQuery is used for drag and drop for instructors to easily organize lessons and courses.
 * Use Amazon Web Services(S3) for photos and video storage.
 * Devise for user security, sign-in forms, etc.
-* Users can be both students and instrucors with restricted Admin access for instructor course development.
+* Users can be both students and instrucors with restricted administrator access for instructor course development.
 * Shows all courses that students are enrolled in & all courses instructors are teaching.
 
 
