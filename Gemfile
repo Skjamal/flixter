@@ -35,7 +35,7 @@ group :doc do
 end
 
 gem 'sass-rails'
-gem 'bootstrap-sass', '~> 3.3.5.1'
+gem 'bootstrap-sass', '~> 3.4.1'
 gem 'sprockets', '2.12.5'
 gem 'devise', '>= 3.2.4'
 gem 'simple_form'
